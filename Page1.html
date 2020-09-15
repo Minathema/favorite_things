@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+      <script type="text/javascript" language="javascript">
+         $(document).ready(function() {
+            $("#button").click(function(event){
+               $.get(
+                  "file.php",
+                  { animal: "Cat" ,food:"Spaghetti" ,colour:"Black"},
+                  function(data) {
+                     $('#fetch').html(data);
+                  }
+               );
+            });
+         });
+      </script>
+      <script>
+$(document).ready(function(){
+    $("#press").click(function(){
+        $("#image2").slideToggle("");
+    });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $("#test1").hover(function(){
+      $(".change").text("MEOW!!").css;;
+  });
+});
+</script>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #FFC0AE;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #E89087;
+  color: white;
+}
+
+.button {
+    background-color: #E871B2;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#test1{
+width:200px;
+height:100px;
+background:#93C1FF
+}
+
+
+#press{background-color:#E871B2;
+	width:600px;
+	height:30px;
+	text-align: center;
+	color:white;
+  cursor: pointer;
+	}
+ #image2 {
+	width:600px;
+	height:400px;
+}
+
+ #image2 {
+
+    display: none;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a class="active" href="Page1.html">Cat</a>
+  <a href="Page2.html">Spaghetti</a>
+  <a href="Page3.html">Black</a>
+</div>
+
+<p id="fetch" style="background-color:#93C1FF; color:black; width:200px; height:200px; margin: 4px 2px;">
+   </p>
+
+<button id="button" class="button">My Favorite Things</button>
+<div id="test1">
+<h3>What does the cat say?</h3>
+<p class="change" style="color:white">----------------</p>
+</div>
+<p>The cat (Felis catus, or Felis silvestris catus, literally "woodland cat"), often referred to as the domestic cat
+  to distinguish from other felids and felines, is a small, typically furry, carnivorous mammal. It is often called house
+  cat when kept as indoor pet or feral/feral domestic cat when wild. It is often valued by humans for companionship and for its ability
+  to hunt vermin. There are more than seventy cat breeds recognized by various cat registries.
+
+Cats are similar in anatomy to the other felids, with a strong flexible body, quick reflexes, sharp teeth and retractable
+claws adapted to killing small prey. Cat senses fit a crepuscular and predatory ecological niche. Cats can hear sounds too
+faint or too high in frequency for human ears, such as those made by mice and other small animals. They can see in near darkness.
+Like most other mammals, cats have poorer color vision and a better sense of smell than humans. Cats, despite being solitary hunters,
+are a social species, and cat communication includes the use of a variety of vocalizations (mewing, purring, trilling, hissing,
+growling and grunting) as well as cat pheromones and types of cat-specific body language. </p>
+<div id="press">Show Image</div>
+<img id="image2" src="A-fluffy-cat-looking-funny-surprised-or-concerned.jpg" />
+
+
+</body>
+</html>
